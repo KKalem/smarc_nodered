@@ -41,7 +41,7 @@ bridge:
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: geographic_msgs.msg:GeoPoint
-    topic_from: dr/lat_lon
+    topic_from: dr/lat_lon/throttled
     topic_to: ~/dr/lat_lon
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
@@ -61,17 +61,17 @@ bridge:
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: std_msgs.msg:Float64
-    topic_from: dr/roll
+    topic_from: dr/roll/throttled
     topic_to: ~/dr/roll
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: std_msgs.msg:Float64
-    topic_from: dr/pitch
+    topic_from: dr/pitch/throttled
     topic_to: ~/dr/pitch
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: std_msgs.msg:Float64
-    topic_from: dr/yaw
+    topic_from: dr/yaw/throttled
     topic_to: ~/dr/yaw
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
@@ -86,12 +86,12 @@ bridge:
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: smarc_msgs.msg:ThrusterFeedback
-    topic_from: core/thruster1_fb
+    topic_from: core/thruster1_fb/throttled
     topic_to: ~/core/thruster1_fb
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
     msg_type: smarc_msgs.msg:ThrusterFeedback
-    topic_from: core/thruster2_fb
+    topic_from: core/thruster2_fb/throttled
     topic_to: ~/core/thruster2_fb
 
   - factory: mqtt_bridge.bridge:RosToMqttBridge
